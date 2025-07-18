@@ -16,10 +16,10 @@
     ${position.translate ? `transform: translate(${position.translate});` : ''}
   `}
 >
-  <p class="text-stroke-2 text-xl w-full">Leaderboard</p>
+  <p class="text-stroke-2 text-2xl w-full">Leaderboards</p>
   <img
     src={kfLeaderboard}
     alt="leaderboard"
-    class="max-h-[130px] w-auto block shrink-0"
+    class="max-h-[130px] w-auto block shrink-0 mb-9"
   />
 </button>
