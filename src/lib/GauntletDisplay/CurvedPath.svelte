@@ -91,5 +91,5 @@
 
 <canvas
   bind:this={canvas}
-  style="position: fixed; top: 0; left: 0; pointer-events: none; z-index: -1;"
+  class="absolute left-0 top-0 pointer-none: z-[-1]"
 ></canvas>

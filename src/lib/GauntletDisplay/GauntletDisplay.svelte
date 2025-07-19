@@ -7,6 +7,8 @@
 
   export let currentLevels = [];
   export let currentWeek;
+  export let levelDetailVisible;
+  export let currentViewedLevel;
 </script>
 
 <h1
@@ -16,10 +18,10 @@
   Karma Farm Challenges - Week {parseInt(currentWeek, 10)}
 </h1>
 
-<div class={`w-[1200px] h-[500px] mx-auto ml-[-20px]`}>
+<div class={`w-[1200px] h-[500px] mx-auto ml-[-20px] overflow-hidden`}>
   <div class="relative w-full h-full">
     {#each currentLevels as level, i}
-      <GauntletItem index={i} levelInfo={currentLevels[i]} />
+      <GauntletItem index={i} levelInfo={currentLevels[i]} bind:levelDetailVisible={levelDetailVisible} bind:currentViewedLevel={currentViewedLevel}/>
     {/each}
     <LeaderboardItem />
     <CurvedPath selectorOne=".item-0" selectorTwo=".item-1"/>

@@ -5,6 +5,8 @@
 
   export let index;
   export let levelInfo;
+  export let levelDetailVisible;
+  export let currentViewedLevel;
 
   const gauntletPositions = [
     { left: "10%", bottom: "10%", translate: "", center: false },
@@ -15,6 +17,11 @@
   ];
 
   const pos = gauntletPositions[index];
+
+  function showPopup() {
+    levelDetailVisible = true;
+    currentViewedLevel = levelInfo;
+  }
 </script>
 
 <button
@@ -29,6 +36,7 @@
       ${pos.top ? `top: ${pos.top};` : ""}
       ${pos.bottom ? `bottom: ${pos.bottom};` : ""}
     `}
+  on:click={showPopup}
 >
   <p class=" text-2xl w-full" style="-webkit-text-stroke: 1px black;">
     {levelInfo.name}
