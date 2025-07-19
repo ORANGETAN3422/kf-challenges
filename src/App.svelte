@@ -19,6 +19,7 @@
     csvData = await fetchCsv();
     currentWeek = await fetchCurrentWeek(csvData);
     currentLevels = await fetchCurrentLevels(csvData, currentWeek);
+    currentViewedLevel = currentLevels[0];
   });
 </script>
 
@@ -37,6 +38,6 @@
     <h2 class="text-5xl text-stroke-2 wrap-break-word">Loading Level Info</h2>
   {:else}
     <GauntletDisplay {currentLevels} {currentWeek} bind:levelDetailVisible={levelDetailVisible} bind:currentViewedLevel={currentViewedLevel} />
-    <LevelDisplay bind:levelDetailVisible={levelDetailVisible} bind:currentViewedLevel={currentViewedLevel}/>
+    <LevelDisplay {currentWeek} {csvData} bind:levelDetailVisible={levelDetailVisible} bind:currentViewedLevel={currentViewedLevel}/>
   {/if}
 </main>
