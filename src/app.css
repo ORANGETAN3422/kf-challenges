@@ -60,12 +60,16 @@ h1 {
 button {
   padding: 0.6em 1.2em;
   cursor: pointer;
-  transition: all 0.25s;
+  transition: all 0.4s cubic-bezier(0.34, 2, 0.64, 1);
   border-radius: 50%;
 }
 
 button:hover {
-  filter: brightness(60%);
+  transform: scale(1.01);
+}
+
+.lb-item:hover {
+  transform: scale(1.05);
 }
 
 .text-stroke-1 {

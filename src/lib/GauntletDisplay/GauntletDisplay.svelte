@@ -1,6 +1,7 @@
 <script>
   import GauntletItem from "./GauntletItem.svelte";
   import LeaderboardItem from "./LeaderboardItem.svelte";
+  import CurvedPath from "./CurvedPath.svelte";
 
   const displayHeight = 500;
 
@@ -15,12 +16,15 @@
   Karma Farm Challenges - Week {parseInt(currentWeek, 10)}
 </h1>
 
-<div class={`w-[1200px] h-[${displayHeight}px] mx-auto ml-[-20px]`}>
+<div class={`w-[1200px] h-[500px] mx-auto ml-[-20px]`}>
   <div class="relative w-full h-full">
     {#each currentLevels as level, i}
       <GauntletItem index={i} levelInfo={currentLevels[i]} />
     {/each}
-
     <LeaderboardItem />
+    <CurvedPath selectorOne=".item-0" selectorTwo=".item-1"/>
+    <CurvedPath selectorOne=".item-1" selectorTwo=".item-2"/>
+    <CurvedPath selectorOne=".item-2" selectorTwo=".item-3"/>
+    <CurvedPath selectorOne=".item-3" selectorTwo=".item-4"/>
   </div>
 </div>

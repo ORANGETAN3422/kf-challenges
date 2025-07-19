@@ -9,7 +9,7 @@
 </script>
 
 <button
-  class="absolute max-h-[130px] flex flex-col items-center justify-center text-center space-y-2 py-2"
+  class="absolute max-h-[130px] flex flex-col items-center justify-center text-center space-y-2 py-2 lb-item item-4"
   style={`
     right: ${position.right};
     bottom: ${position.bottom};

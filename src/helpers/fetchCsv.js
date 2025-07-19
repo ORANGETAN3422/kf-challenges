@@ -47,7 +47,7 @@ export async function fetchCsv() {
 export async function fetchCurrentWeek(csvData) {
   const lines = csvData.split("\n").map((line) => line.trim());
   const firstLine = lines[0];
-  const firstColumn = firstLine.split(",")[0]; // assuming CSV is comma-separated
+  const firstColumn = firstLine.split(",")[0];
 
   const match = firstColumn.match(/\[(.*?)\]/);
   const currentWeek = match ? match[1] : "01";
