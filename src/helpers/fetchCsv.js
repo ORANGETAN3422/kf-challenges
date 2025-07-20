@@ -17,3 +17,8 @@ export async function fetchCurrentWeek(csvData) {
 
   return currentWeek;
 }
+
+
+export async function checkIfStarted(csvData) {
+  
+}

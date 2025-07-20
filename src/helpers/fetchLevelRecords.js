@@ -22,7 +22,7 @@ export function findRecordsForLevel(csvData, week, level) {
     if (!match || match[1] !== levelId) continue;
 
     for (let j = 1; j < columns.length; j++) {
-      if (columns[j].trim().toLowerCase() === "complete") {
+      if (columns[j].trim() === "1" || columns[j].trim() === "2" || columns[j].trim() === "4" || columns[j].trim() === "7") {
         victors.push(names[j - 1]);
       }
     }

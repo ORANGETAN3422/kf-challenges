@@ -29,12 +29,12 @@
 </script>
 
 {#if levelDetailVisible}
-  <div class="level-popup ml-[-20px] fixed inset-0 z-50 flex items-center justify-center">
+  <div class="level-popup ml-[-20px] fixed inset-0 z-50 flex items-center justify-center pointer-events-none">
     <div class="relative">
       <img src={kfFrame01} alt="background" class="min-w-120 max-w-120" />
 
       <div
-        class="absolute top-[43px] left-[50px] w-[380px] h-[630px] text-white text-xl overflow-scroll scroll-container"
+        class="absolute top-[43px] left-[50px] w-[380px] h-[630px] text-white text-xl overflow-scroll scroll-container !pointer-events-auto" 
       >
         <img
           src={`https://tjcsucht.net/levelthumbs/${currentViewedLevel.id}.png`}
@@ -92,7 +92,7 @@
         </div>
 
         <div
-          class="absolute top-[292px] left-[3%] w-[94%] h-[104px] bg-yellow-950/50 rounded-xl px-2 py-1 z-20 drop-shadow-md"
+          class="absolute top-[292px] left-[3%] w-[94%] h-[116px] bg-yellow-950/50 rounded-xl px-2 py-1 z-20 drop-shadow-md"
         >
           <p>Difficulty: {currentViewedLevel.difficulty}</p>
           <p>Created by {currentViewedLevel.creator}</p>

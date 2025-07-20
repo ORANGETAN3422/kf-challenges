@@ -28,11 +28,11 @@
 </script>
 
 {#if leaderboardVisible}
-  <div class="level-popup ml-[-20px] fixed inset-0 z-50 flex items-center justify-center">
+  <div class="level-popup ml-[-20px] fixed inset-0 z-50 flex items-center justify-center pointer-events-none">
     <div class="relative">
       <img src={kfFrame01} alt="background" class="min-w-[480px] max-w-[480px]" />
 
-      <div class="absolute top-[43px] left-[50px] w-[380px] h-[630px] text-white text-xl overflow-scroll scroll-container">
+      <div class="absolute top-[43px] left-[50px] w-[380px] h-[630px] text-white text-xl overflow-scroll scroll-container !pointer-events-auto">
         <button
           class="absolute top-1 right-1 w-[65px] h-[65px] hover:scale-110 !p-0 z-100 x-button"
           on:click={hidePopup}

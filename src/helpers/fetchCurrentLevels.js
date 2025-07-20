@@ -32,7 +32,7 @@ async function fetchChallenges(ids) {
         creator: data.Meta.Creator,
         difficulty: data.Meta.Difficulty + " Demon",
         stars: 10,
-        gddl: data.Rating
+        gddl: Math.round(data.Rating)
       };
     } catch {
       const fallbackRes = await fetch(`${apiColon}${id}`);
