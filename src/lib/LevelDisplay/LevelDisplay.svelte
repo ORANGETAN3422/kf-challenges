@@ -44,7 +44,7 @@
         />
 
         <button
-          class="absolute top-1 right-1 w-[65px] h-[65px] z-20 hover:scale-110 !p-0"
+          class="absolute top-1 right-1 w-[65px] h-[65px] z-20 hover:scale-110 !p-0 x-button"
           on:click={hidePopup}
         >
           <img src={closeIcon} alt="X" class="w-full h-auto" />

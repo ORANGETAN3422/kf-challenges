@@ -8,6 +8,7 @@
   import LeaderboardDisplay from "./lib/LeaderboardDisplay/LeaderboardDisplay.svelte";
 
   import kfBackground from "/kf-background.png";
+  import closeIcon from "/icons/close.png";
 
   let currentWeek;
   let csvData;
@@ -16,6 +17,11 @@
   export let currentViewedLevel;
   export let levelDetailVisible = false;
   export let leaderboardVisible = false;
+
+  function hidePopup() {
+    leaderboardVisible = false;
+    levelDetailVisible = false;
+  }
 
   onMount(async () => {
     csvData = await fetchCsv();
@@ -63,10 +69,15 @@
       bind:levelDetailVisible
       bind:currentViewedLevel
     />
-    <LeaderboardDisplay
-      {currentWeek}
-      {csvData}
-      bind:leaderboardVisible
-    />
+    <LeaderboardDisplay {currentWeek} {csvData} bind:leaderboardVisible />
+  {/if}
+
+  {#if levelDetailVisible || leaderboardVisible}
+    <button
+      class="absolute top-1 right-1 w-[65px] h-[65px] hover:scale-110 !p-0 z-100 global-x-button"
+      on:click={hidePopup}
+    >
+      <img src={closeIcon} alt="X" class="w-full h-auto" />
+    </button>
   {/if}
 </main>

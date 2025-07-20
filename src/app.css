@@ -99,3 +99,24 @@ button:hover {
     background-color: #f9f9f9;
   }
 }
+
+@media (max-width: 480px) {
+  .level-popup {
+    transform: scale(0.85);
+    transform-origin: top center;
+    position: fixed;
+    top: 20vh !important;
+    left: 50% !important;
+    transform: translateX(calc(-50% * 0.8)) scale(0.8) !important; /* Center horizontally & scale */
+  }
+
+  .x-button {
+    display: none;
+  }
+}
+
+@media (min-width: 481px) {
+  .global-x-button {
+    display: none;
+  }
+}
