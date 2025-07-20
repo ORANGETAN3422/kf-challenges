@@ -8,7 +8,5 @@ export default defineConfig({
     svelte(),
     tailwindcss(),
   ],
-  server: [
-    hmr.overlay = false,
-  ]
+  base: '/kf-challenges/',
 })
