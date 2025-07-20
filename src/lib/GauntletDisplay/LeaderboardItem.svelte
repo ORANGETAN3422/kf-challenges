@@ -1,9 +1,15 @@
 <script>
   import kfLeaderboard from "/kf-leaderboard.png";
 
+  export let leaderboardVisible;
+
+  function showPopup() {
+    leaderboardVisible = true;
+  }
+
   const position = {
     right: '10%',
-    bottom: '10%',
+    bottom: '15%',
     translate: ''
   };
 </script>
@@ -15,8 +21,9 @@
     bottom: ${position.bottom};
     ${position.translate ? `transform: translate(${position.translate});` : ''}
   `}
+  on:click={showPopup}
 >
-  <p class="text-stroke-2 text-2xl w-full">Leaderboards</p>
+  <p class="text-stroke-2 text-2xl w-full" style="-webkit-text-stroke: 1px black;">Leaderboards</p>
   <img
     src={kfLeaderboard}
     alt="leaderboard"

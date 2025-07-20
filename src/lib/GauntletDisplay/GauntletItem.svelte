@@ -9,11 +9,11 @@
   export let currentViewedLevel;
 
   const gauntletPositions = [
-    { left: "10%", bottom: "10%", translate: "", center: false },
+    { left: "10%", bottom: "15%", translate: "", center: false },
     { left: "27%", top: "20%", translate: "", center: false },
-    { left: "50%", bottom: "10%", translate: "-50%, 0", center: true },
+    { left: "50%", bottom: "15%", translate: "-50%, 0", center: true },
     { right: "27%", top: "20%", translate: "", center: false },
-    { right: "10%", bottom: "10%", translate: "", center: false },
+    { right: "10%", bottom: "15%", translate: "", center: false },
   ];
 
   const pos = gauntletPositions[index];

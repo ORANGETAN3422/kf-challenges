@@ -29,11 +29,13 @@
 </script>
 
 {#if levelDetailVisible}
-  <div class="level-popup fixed inset-0 z-50 flex items-center justify-center">
+  <div class="level-popup ml-[-20px] fixed inset-0 z-50 flex items-center justify-center">
     <div class="relative">
       <img src={kfFrame01} alt="background" class="min-w-120 max-w-120" />
 
-      <div class="absolute top-[43px] left-[50px] w-[380px] h-[630px] text-white text-xl overflow-scroll">
+      <div
+        class="absolute top-[43px] left-[50px] w-[380px] h-[630px] text-white text-xl overflow-scroll scroll-container"
+      >
         <img
           src={`https://tjcsucht.net/levelthumbs/${currentViewedLevel.id}.png`}
           alt=""
@@ -48,7 +50,10 @@
           <img src={closeIcon} alt="X" class="w-full h-auto" />
         </button>
 
-        <h3 class="absolute w-full top-[170px] text-4xl text-center z-20 drop-shadow-md font-bold bg-gradient-to-b from-[#ffd500] to-[#ffbc70] bg-clip-text text-transparent" style="-webkit-text-stroke: black 1.5px;">
+        <h3
+          class="absolute w-full top-[170px] text-4xl text-center z-20 drop-shadow-md font-bold bg-gradient-to-b from-[#ffd500] to-[#ffbc70] bg-clip-text text-transparent"
+          style="-webkit-text-stroke: black 1.5px;"
+        >
           {currentViewedLevel.name}
         </h3>
 
@@ -58,15 +63,22 @@
             alt="*"
             class="w-[2em] h-[2em] mr-2"
           />
-          <p class="text-3xl drop-shadow" style="-webkit-text-stroke: black 1px;">
-            {currentViewedLevel.gddl === 0 ? currentViewedLevel.stars : Math.floor(currentViewedLevel.gddl)}
+          <p
+            class="text-3xl drop-shadow"
+            style="-webkit-text-stroke: black 1px;"
+          >
+            {currentViewedLevel.gddl === 0
+              ? currentViewedLevel.stars
+              : Math.floor(currentViewedLevel.gddl)}
           </p>
         </div>
 
-        <div class="absolute top-[217px] left-[3%] w-[94%] h-[67px] bg-yellow-950/50 rounded-xl px-2 py-1 z-20 drop-shadow-md">
-          <p>{points} Point{points === 1 ? '' : 's'} on completion</p>
+        <div
+          class="absolute top-[217px] left-[3%] w-[94%] h-[67px] bg-yellow-950/50 rounded-xl px-2 py-1 z-20 drop-shadow-md"
+        >
+          <p>{points} Point{points === 1 ? "" : "s"} on completion</p>
           <p>
-            ID: 
+            ID:
             <!-- svelte-ignore a11y_no_static_element_interactions -->
             <!-- svelte-ignore a11y_click_events_have_key_events -->
             <span
@@ -79,11 +91,13 @@
           </p>
         </div>
 
-        <div class="absolute top-[292px] left-[3%] w-[94%] h-[104px] bg-yellow-950/50 rounded-xl px-2 py-1 z-20 drop-shadow-md">
+        <div
+          class="absolute top-[292px] left-[3%] w-[94%] h-[104px] bg-yellow-950/50 rounded-xl px-2 py-1 z-20 drop-shadow-md"
+        >
           <p>Difficulty: {currentViewedLevel.difficulty}</p>
           <p>Created by {currentViewedLevel.creator}</p>
           <p>
-            GD Browser: 
+            GD Browser:
             <i>
               <a
                 href={`https://gdbrowser.com/${currentViewedLevel.id}`}
@@ -97,7 +111,6 @@
         </div>
 
         <LevelCompletions {csvData} {currentWeek} {currentViewedLevel} />
-
       </div>
     </div>
   </div>
