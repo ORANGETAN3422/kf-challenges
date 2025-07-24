@@ -8,7 +8,7 @@
   let records = [];
 
   $: records = findRecordsForLevel(csvData, currentWeek, currentViewedLevel.id);
-  $: dynamicHeight = `${50 + records.length * 35}px`;
+  $: dynamicHeight = `${50 + records.length * 37}px`;
 </script>
 
 <div

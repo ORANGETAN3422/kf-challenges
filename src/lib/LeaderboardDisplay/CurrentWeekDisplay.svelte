@@ -1,6 +1,6 @@
 <script>
   export let currentWeekRecords;
-  $: dynamicHeight = `${50 + currentWeekRecords.length * 35}px`;
+  $: dynamicHeight = `${50 + currentWeekRecords.length * 37}px`;
 </script>
 
 <div class="absolute current-week overflow-scroll scroll-container h-[265px] w-full top-[75px] left-0">

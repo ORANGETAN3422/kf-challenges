@@ -1,6 +1,6 @@
 <script>
   export let allTimeRecords;
-  $: dynamicHeight = `${50 + allTimeRecords.length * 35}px`;
+  $: dynamicHeight = `${50 + allTimeRecords.length * 37}px`;
 </script>
 
 <div class="absolute all-time overflow-scroll scroll-container h-[265px] w-full top-[352px] left-0">
