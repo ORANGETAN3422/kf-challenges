@@ -1,4 +1,6 @@
 <script>
+  import PersonName from "./PersonName.svelte";
+
   export let allTimeRecords;
   $: dynamicHeight = `${50 + allTimeRecords.length * 37}px`;
 </script>
@@ -16,15 +18,7 @@
     </h3>
 
     {#each allTimeRecords as person, index}
-      <div class="flex justify-between items-center py-1 border-b border-yellow-800/[50%] last:border-none text-white px-2">
-        <div class="flex items-center gap-2">
-          <span class="font-bold text-yellow-400">{index + 1}.</span>
-          <span>{person.name}</span>
-        </div>
-        <div class="text-yellow-300 font-semibold">
-          {person.points} pts
-        </div>
-      </div>
+      <PersonName {index} {person} />
     {/each}
   </div>
 </div>
